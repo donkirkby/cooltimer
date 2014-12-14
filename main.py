@@ -10,12 +10,15 @@ class TimerDisplay(Widget):
     timer = ObjectProperty(None)
 
     def start(self):
-        self.end_time = datetime.now() + timedelta(seconds=20)
+        self.end_time = datetime.now() + timedelta(minutes=2, seconds=1)
         self.tick(0)
         
     def tick(self, dt):
         time_left = self.end_time - datetime.now()
-        seconds_left = time_left.seconds
+        if time_left.days < 0:
+            seconds_left = 0
+        else:
+            seconds_left = time_left.seconds
         minutes, seconds = divmod(seconds_left, 60)
         self.timer.text = "{}:{:02}".format(minutes, seconds)
 
