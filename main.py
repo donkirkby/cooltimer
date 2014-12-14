@@ -4,6 +4,8 @@ from kivy.clock import Clock
 from kivy.properties import ObjectProperty
 from kivy.uix.widget import Widget
 
+__version__ = '0.1.0'
+
 class TimerDisplay(Widget):
     timer = ObjectProperty(None)
 

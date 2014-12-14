@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = Cool Timer
 
 # (str) Package name
-package.name = myapp
+package.name = cooltimer
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = com.github.donkirkby.cooltimer
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -32,7 +32,7 @@ version.filename = %(source.dir)s/main.py
 # version = 1.2.0
 
 # (list) Application requirements
-# comma seperated e.g. requirements = sqlite3,kivy
+# comma separated e.g. requirements = sqlite3,kivy
 requirements = kivy
 
 # (list) Garden requirements
@@ -77,7 +77,8 @@ fullscreen = 1
 #android.ndk_path =
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
-#android.sdk_path =
+# Create a symlink in the project folder.
+android.sdk_path = android-sdks
 
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
 #android.p4a_dir =
